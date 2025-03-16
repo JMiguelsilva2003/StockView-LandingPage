@@ -594,3 +594,10 @@ footer {
     height: auto;
     margin: 34px auto 34px;
 }
+
+.services-container > .services-box > img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: auto;
+}
