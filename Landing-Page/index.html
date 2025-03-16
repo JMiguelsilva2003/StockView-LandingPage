@@ -129,7 +129,7 @@
                     <p>O <strong>StockView</strong> é uma plataforma inovadora projetada para gerenciar estoques de produtos, combinando tecnologia de ponta com uma interface prática e eficiente. Nosso objetivo é oferecer uma solução robusta que permita aos usuários acompanhar, atualizar e monitorar o estoque em tempo real, promovendo maior controle e organização no gerenciamento de inventários. Para alcançar esse objetivo, utilizamos uma combinação estratégica de ferramentas e tecnologias de alto desempenho.</p>
 
                     <div id="container-video">
-                        <video src="videos/Pitch.mov" id="pitch" controls autoplay></video>
+                        <video src="videos/Pitch.mov" id="pitch" controls></video>
                         <img src="img/logo.jpg" id="img-video" alt="logo-StockView">
                     </div>
 
@@ -179,21 +179,27 @@
         <section class="contact" id="contact">
             <h2>Contact <span>Me!</span></h2>
 
-            <form action="submit.php" method="POST">
+            <form id="contactForm">
                 <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="text" name="name" id="name" placeholder="Full Name" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
                 </div>
-
+                        
                 <div class="input-box">
-                    <input type="number" name="phone" placeholder="Phone Number" required>
-                    <input type="text" name="text" placeholder="Subject" required>
+                    <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                    <input type="text" name="text" id="subject" placeholder="Subject" required>
                 </div>
+                        
+                <div class="input-box">
+                    <textarea id="message" cols="30" rows="8" placeholder="Message" required></textarea>
+                </div>
+                
+                <!-- Div para mensagens -->
+                <div id="statusMessage" style="color: #333; margin-bottom: 10px;"></div>
 
-                <textarea cols="30" rows="8" placeholder="Message"></textarea>
-
-                <a href="" class="btn">Send Message</a>
-            </form>
+                <!-- Botão "a" para envio -->
+                <a href="#" id="sendMessage" class="btn">Send Message</a>
+            </form>            
         </section>
         <!-- contact section -->
 
@@ -235,5 +241,9 @@
         <p>Copyright &copy; 2024 by JOSÉ MIGUEL DA SILVA. All Rights Reserved</p>
     </footer>
 </body>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 <script src="JS/script.js"></script>
 </html> 

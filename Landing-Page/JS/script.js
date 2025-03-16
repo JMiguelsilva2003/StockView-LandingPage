@@ -85,3 +85,41 @@ function changeImage2() {
 }
 
 setInterval(changeImage2, 4000); // Troca de imagem e texto a cada 4 segundos
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Inicializar o EmailJS
+    emailjs.init("BbdTouk1iitMKwgYG");
+
+    const sendMessage = document.getElementById("sendMessage");
+    const statusMessage = document.getElementById("statusMessage");
+
+    sendMessage.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevenir comportamento padrão do link
+
+        // Limpar mensagens anteriores
+        statusMessage.textContent = "";
+        statusMessage.style.color = "#333";
+
+        const params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+        };
+
+        // Enviar e-mail usando EmailJS
+        console.log(params); // Verifique os dados antes de enviar
+        emailjs.send("service_vee45h4", "template_sx5f8bq", params)
+            .then(function(response) {
+                // Mensagem de sucesso
+                statusMessage.textContent = "Mensagem enviada com sucesso!";
+                statusMessage.style.color = "green";
+            }, function(error) {
+                // Mensagem de erro
+                statusMessage.textContent = "Erro ao enviar mensagem. Tente novamente.";
+                statusMessage.style.color = "red";
+                console.error("Erro ao enviar:", error);
+            });        
+    });
+});
