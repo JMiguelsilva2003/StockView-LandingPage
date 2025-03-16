@@ -18,6 +18,7 @@
             <a href="#home">Home</a>
             <a href="#services">Technologies</a>
             <a href="#portfolio">About</a>
+            <a href="#instructions">instructions</a>
             <a href="#contact">Contact</a>
             <a href="#about">O que fizemos</a>
         </div>
@@ -26,6 +27,7 @@
             <a href="#home">Home</a>
             <a href="#services">Technologies</a>
             <a href="#portfolio">About</a>
+            <a href="#instructions">instructions</a>
             <a href="#contact">Contact</a>
             <a href="#about">O que fizemos</a>
         </div>
@@ -120,6 +122,78 @@
         </section>
         <!--service section -->
 
+        <!--membros section -->
+        <section class="services" id="services">
+            <h2><span>Membros</span></h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Web Development</h3>
+
+                    <p>
+                    <span>Site (Frontend):</span> Desenvolvido com <strong>HTML</strong> para estruturação,  <strong>CSS</strong> para estilização e <strong>JavaScript</strong> para interatividade. <br><br>
+                <span>Site (Back-End):</span> Utilizamos <strong>Node.js</strong> com <strong>Express.js</strong> para criar o servidor local e gerenciar as rotas.
+                    </p>
+
+                    <a href="" class="btn">Read More</a>
+                </div>
+
+                <div class="services-box">
+                    <i class='bx bx-code-curly' ></i>
+                    <h3>Back-End Development</h3>
+
+                    <p>
+                    <span>API (Backend):</span> Criada em <strong>Python</strong> usando o framework <strong>FastAPI</strong>, responsável por conectar o site, o aplicativo e o banco de dados.
+                    </p>
+
+                    <a href="" class="btn">Read More</a>
+                </div>
+
+                <div class="services-box">
+                    <i class='bx bx-mobile-alt' ></i>
+                    <h3>Mobile Development</h3>
+
+                    <p>
+                    <span>Aplicativo Mobile (Android):</span> Desenvolvido em <strong>Java</strong> e <strong>Kotlin</strong>, com suporte das seguintes bibliotecas:
+                    <br>
+                        <strong>-Gson Converter</strong>: Para manipular JSON.
+                        <br>
+                        <strong>-Retrofit2</strong>: Para requisições HTTP.
+                        <br>
+                        <strong>-Glide</strong>: Para carregar imagens.
+                        <br>
+                        <strong>-OkHttp</strong>: Para conexões de rede.
+                        <br>
+                    <strong>-</strong>Desenvolvido no <strong>Android Studio Ladybug - 2024.2.1 Patch 2</strong>.
+                    </p>
+
+                    <a href="" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class='bx bx-mobile-alt' ></i>
+                    <h3>Mobile Development</h3>
+
+                    <p>
+                    <span>Aplicativo Mobile (Android):</span> Desenvolvido em <strong>Java</strong> e <strong>Kotlin</strong>, com suporte das seguintes bibliotecas:
+                    <br>
+                        <strong>-Gson Converter</strong>: Para manipular JSON.
+                        <br>
+                        <strong>-Retrofit2</strong>: Para requisições HTTP.
+                        <br>
+                        <strong>-Glide</strong>: Para carregar imagens.
+                        <br>
+                        <strong>-OkHttp</strong>: Para conexões de rede.
+                        <br>
+                    <strong>-</strong>Desenvolvido no <strong>Android Studio Ladybug - 2024.2.1 Patch 2</strong>.
+                    </p>
+
+                    <a href="" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <!--membros section -->
+
         <!--portfolio section -->
         <section class="portfolio" id="portfolio">
             <h2>About <span>StockView</span></h2>
@@ -174,6 +248,69 @@
             </div>
         </section>
         <!--portfolio section -->
+
+        <!-- instructions section -->
+        <section class="instructions" id="instructions">
+            <h2>Installation <span>instructions</span></h2>
+
+            <div class="instructions-content">
+        
+                <p>Para instalar e configurar o StockView corretamente, siga os passos abaixo:</p>
+        
+                <h4>Servidor da API</h4>
+                <ol>
+                    <li><strong>Criar um ambiente virtual</strong> (opcional, mas recomendado):
+                        <pre><code>
+        python -m venv venv
+        source venv/bin/activate  # Linux/Mac
+        venv\Scripts\activate  # Windows
+                        </code></pre>
+                    </li>
+                    <li><strong>Acessar a pasta do servidor:</strong>
+                        <pre><code>cd servidor_refatorado</code></pre>
+                    </li>
+                    <li><strong>Instalar os requisitos do projeto:</strong>
+                        <pre><code>pip install -r requirements.txt</code></pre>
+                    </li>
+                    <li><strong>Copiar e editar o arquivo de configuração:</strong>
+                        <pre><code>
+        copy config.json C:/  # Windows
+        cp config.json /  # Linux/Mac
+                        </code></pre>
+                        Edite o arquivo <code>C:/config.json</code> com as variáveis:
+                        <pre><code>
+        {
+            "PORT_LOCAL": 3000,
+            "PRODUCT_MODE": true,
+            "HOST_URL": "127.0.0.1",
+            "START_QUESTION_CAMERA_ID": true,
+            "START_QUESTION_CAMERA": true,
+            "DEFAULT_CAMERA": 0
+        }
+                        </code></pre>
+                    </li>
+                    <li><strong>Executar o servidor da API:</strong>
+                        <pre><code>python main.py</code></pre>
+                    </li>
+                </ol>
+                <p>Agora o servidor estará rodando e pronto para ser utilizado!</p>
+        
+                <h4>Inicialização da Câmera</h4>
+                <ol>
+                    <li><strong>Abrir a pasta <code>Cliente Camera</code> em outro terminal:</strong>
+                        <pre><code>cd "Cliente Camera"</code></pre>
+                    </li>
+                    <li><strong>Instalar as bibliotecas necessárias:</strong>
+                        <pre><code>pip install opencv-python asyncio aiohttp numpy</code></pre>
+                    </li>
+                    <li><strong>Executar o script da câmera:</strong>
+                        <pre><code>python main-camera.py</code></pre>
+                    </li>
+                </ol>
+                <p>Agora a câmera estará operando corretamente e integrada ao sistema!</p>
+            </div>
+        </section>        
+        <!-- instructions section -->
 
         <!-- contact section -->
         <section class="contact" id="contact">
