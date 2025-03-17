@@ -21,7 +21,6 @@
             <a href="#services">Technologies</a>
             <a href="#membros">membros</a>
             <a href="#portfolio">About</a>
-            <a href="#instructions">instructions</a>
             <a href="#contact">Contact</a>
             <a href="#about">O que fizemos</a>
         </div>
@@ -31,7 +30,6 @@
             <a href="#services">Technologies</a>
             <a href="#membros">membros</a>
             <a href="#portfolio">About</a>
-            <a href="#instructions">instructions</a>
             <a href="#contact">Contact</a>
             <a href="#about">O que fizemos</a>
         </div>
@@ -305,69 +303,6 @@
             </div>
         </section>
         <!--portfolio section -->
-
-        <!-- instructions section -->
-        <section class="instructions" id="instructions">
-            <h2>Installation <span>instructions</span></h2>
-
-            <div class="instructions-content">
-        
-                <p>Para instalar e configurar o StockView corretamente, siga os passos abaixo:</p>
-        
-                <h4>Servidor da API</h4>
-                <ol>
-                    <li><strong>Criar um ambiente virtual</strong> (opcional, mas recomendado):
-                        <pre><code>
-        python -m venv venv
-        source venv/bin/activate  # Linux/Mac
-        venv\Scripts\activate  # Windows
-                        </code></pre>
-                    </li>
-                    <li><strong>Acessar a pasta do servidor:</strong>
-                        <pre><code>cd servidor_refatorado</code></pre>
-                    </li>
-                    <li><strong>Instalar os requisitos do projeto:</strong>
-                        <pre><code>pip install -r requirements.txt</code></pre>
-                    </li>
-                    <li><strong>Copiar e editar o arquivo de configuração:</strong>
-                        <pre><code>
-        copy config.json C:/  # Windows
-        cp config.json /  # Linux/Mac
-                        </code></pre>
-                        Edite o arquivo <code>C:/config.json</code> com as variáveis:
-                        <pre><code>
-        {
-            "PORT_LOCAL": 3000,
-            "PRODUCT_MODE": true,
-            "HOST_URL": "127.0.0.1",
-            "START_QUESTION_CAMERA_ID": true,
-            "START_QUESTION_CAMERA": true,
-            "DEFAULT_CAMERA": 0
-        }
-                        </code></pre>
-                    </li>
-                    <li><strong>Executar o servidor da API:</strong>
-                        <pre><code>python main.py</code></pre>
-                    </li>
-                </ol>
-                <p>Agora o servidor estará rodando e pronto para ser utilizado!</p>
-        
-                <h4>Inicialização da Câmera</h4>
-                <ol>
-                    <li><strong>Abrir a pasta <code>Cliente Camera</code> em outro terminal:</strong>
-                        <pre><code>cd "Cliente Camera"</code></pre>
-                    </li>
-                    <li><strong>Instalar as bibliotecas necessárias:</strong>
-                        <pre><code>pip install opencv-python asyncio aiohttp numpy</code></pre>
-                    </li>
-                    <li><strong>Executar o script da câmera:</strong>
-                        <pre><code>python main-camera.py</code></pre>
-                    </li>
-                </ol>
-                <p>Agora a câmera estará operando corretamente e integrada ao sistema!</p>
-            </div>
-        </section>        
-        <!-- instructions section -->
 
         <!-- contact section -->
         <section class="contact" id="contact">
