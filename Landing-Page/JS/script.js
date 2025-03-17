@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .then(function(response) {
                 // Mensagem de sucesso
                 statusMessage.textContent = "Mensagem enviada com sucesso!";
-                statusMessage.style.color = "green";
+                statusMessage.style.color = "#00eeff";
             }, function(error) {
                 // Mensagem de erro
                 statusMessage.textContent = "Erro ao enviar mensagem. Tente novamente.";
