@@ -69,6 +69,12 @@
     .services-box {
         width: 100%;
     }
+
+    
+    .img-textSobre1 {
+        width: 90%;
+        height: auto;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 600px) {
@@ -86,6 +92,21 @@
             display: block;
             font-size: 25px;
         }
+}
+
+@media (min-width: 0px) and (max-width: 1130px) {
+    .img-text-sobre {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1230px) {
+    #pitch {
+        width: 95%;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 389px) {
@@ -128,7 +149,7 @@
 }
 
 /*tablet*/
-@media (min-width:768px) {
+@media (min-width:990px) {
     .menu-hamburguer {
         display: none;
     }
@@ -171,10 +192,11 @@
     form .input-box input {
         width: 49%;
     }
+
 }
 
 /*Notebook*/
-@media (min-width:992px) {
+@media (min-width:1100px) {
     /*.home-img, .about-img {
         max-width: 35%;
     }*/
@@ -183,6 +205,7 @@
         flex-direction: row;
         gap: 1.2rem;
     }
+
 }
 
 /*Extra large*/
